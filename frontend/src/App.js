@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const PORT = 5001;
+const PORT = process.env.REACT_APP_PORT;
 
 function App() {
   const [users, setUsers] = useState([]);

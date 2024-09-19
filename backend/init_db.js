@@ -1,5 +1,7 @@
 // init_db.js
-const { DB_PATH } = require("./config");
+require("dotenv").config({ path: "../frontend/.env" });
+const DB_PATH = process.env.REACT_APP_DB_PATH;
+
 const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database(`${DB_PATH}`);
 
